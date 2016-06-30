@@ -1,5 +1,4 @@
 # main links links
 main:
-
   - title: "About"
-    url: https://katie-truong.github.io/about.md
+    url: /about/
