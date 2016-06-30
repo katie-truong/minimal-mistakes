@@ -1,6 +1,6 @@
 ---
-layout: single
-title: About Me
+layout: default
+title: About
 tags: [about]
 permalink: /about/
 author_profile: true
