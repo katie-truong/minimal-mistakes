@@ -7,10 +7,10 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Site Title"
+title                    : "360 Degrees of Uncertainty"
 title_separator          : "-"
-name                     : "Your Name"
-description              : "An amazing website."
+name                     : "Katie Truong"
+description              : "A blog on data analysis"
 url                      : # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 gh_repo                  :
@@ -63,10 +63,10 @@ google_ad_slot           :
 
 # Site Author
 author:
-  name             : "Your Name"
-  avatar           : "bio-photo.jpg"
-  bio              : "I am an amazing person."
-  location         : "Somewhere"
+  name             : "Katie Truong"
+  avatar           : "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAgCAAAAJDdmMTY1ZjJmLTQ4NjctNDg0MC1hNTgwLTM0NGZlMzcwZTkxZg.jpg"
+  bio              : "Rising senior, Statistics major at UC Davis"
+  location         : "Davis"
   email            :
   uri              :
   bitbucket        :
