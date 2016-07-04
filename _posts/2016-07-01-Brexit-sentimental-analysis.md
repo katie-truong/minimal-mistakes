@@ -300,7 +300,7 @@ The graph of polarity score against number of favorites:
 
 We can see that the neutral tweets tend to be more favorited than positive or negative tweets.
 
-Finally, I would like to see the relationship between number of retweets and number of favorites (although we already see the Twitter community is somewhat lukewarm with the heart button). With a few lines of code, we can easily make a scatterplot:
+Finally, I would like to see the relationship between number of retweets and number of favorites (although we already see the users in the sample is somewhat lukewarm with the heart button). With a few lines of code, we can easily make a scatterplot:
 
 ```r
 fav.vs.retweet = ggplot(brexit, aes(x = favoriteCount, y = retweetCount))
@@ -311,7 +311,7 @@ The plot turns out to be:
 
 ![Favorite Counts vs Retweet Counts](/images/Brexit-fav-vs-retweet.png)
 
-As we can see, there is a very small correlation between the number of retweets and the number of favorites. In fact, many retweeted tweets get zero favorites, just to prove how merr the Twitter community is to the favorite function.
+As we can see, there is a very small correlation between the number of retweets and the number of favorites. In fact, many retweeted tweets get zero favorites, just to prove how merr the users in the sample are to the favorite function.
 
 ## Conclusion
 
@@ -322,7 +322,7 @@ As we can see, there is a very small correlation between the number of retweets 
 ### About the analysis
 - Sentimental analysis by the function `polarity` in the `qdap` package works very well with straightforward tweets, but doesn't work well with sarcasm.
 - The top retweeted tweets on Twitter tend to be neutral tweets.
-- As a non-Twitter user, I was fascinated to find out that Twitter users are very lukewarm with the favorite button. Instead, they retweet to express their opinions.
+- As a non-Twitter user, I am not sure if the nonchalance towards the favorite function only applies to this sample, or to Twitter as a whole. Maybe a Twitter user can shed me some light on this?
 
 I guess this is the end of my first post on this blog. Thanks for reading through such a very long, detailed post. Please leave a comment so I can improve my contents, and stay tuned for the next posts.
 
