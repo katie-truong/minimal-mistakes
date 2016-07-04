@@ -3,4 +3,4 @@ main:
 - title: "About"
     url: /about/
 - title: "Posts by Year"
-  url: /year-archive/
+    url: /year-archive/
