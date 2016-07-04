@@ -1,7 +1,7 @@
 # Site navigation links
+main:
+  - title: "About"
+    url: /about/
 
-- title: About Me
-  url: /about/
-
-- title: Posts
-  url: /year-archive/
+  - title: "Posts"
+    url: /year-archive/
