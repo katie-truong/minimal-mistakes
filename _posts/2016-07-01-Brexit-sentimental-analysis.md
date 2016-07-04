@@ -218,9 +218,9 @@ Which gives me:
 
  According to the calculation, positive tweets have the highest average number of retweets; neutral tweets have the second place; and negative tweets have the lowest number of retweets. However, notice that the number of retweets are **really really** high, which suggests there are outliers in the sample which skew the result. In this situation, I decide to look into the median as an alternative:
  
- ```r
+```r
  tapply(brexit$retweetCount, brexit$polarity, median)
- ```
+```
  
  Which comes out to be:
  
