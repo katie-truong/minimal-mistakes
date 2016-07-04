@@ -313,13 +313,13 @@ The plot turns out to be:
 
 As we can see, there is a very small correlation between the number of retweets and the number of favorites. In fact, many retweeted tweets get zero favorites, just to prove how merr the Twitter community is to the favorite function.
 
-## Conclusion:
+## Conclusion
 
-### About Brexit:
+### About Brexit
 - The reactions to Brexit on Twitter are very polarized. There are people who are devastated, and people who are genuinely happy about Brexit.
 - People are also very sarcastic toward how Brexit turned out be (as someone said, "sarcasm is the wit")
 
-### About the analysis, in general:
+### About the analysis
 - Sentimental analysis by the function `polarity` in the `qdap` package works very well with straightforward tweets, but doesn't work well with sarcasm.
 - The top retweeted tweets on Twitter tend to be neutral tweets.
 - As a non-Twitter user, I was fascinated to find out that Twitter users are very lukewarm with the favorite button. Instead, they retweet to express their opinions.
