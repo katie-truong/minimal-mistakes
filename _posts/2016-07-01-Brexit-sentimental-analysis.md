@@ -28,7 +28,7 @@ access_secret = 'D'
 setup_twitter_oauth(consumer_key, consumer_secret, access_token, access_secret)
 
 # Scrape the data, 10000 tweets, language = English
-brexit = searchTwitter("#Brexit", n = 50000, since = "2016-06-23", until = "2016-06-24", lang = "en")
+brexit = searchTwitter("#Brexit", n = 10000, since = "2016-06-23", until = "2016-06-24", lang = "en")
 brexit = twListToDF(brexit)
 ```
 
@@ -317,7 +317,7 @@ As we can see, there is a very small correlation between the number of retweets 
 
 ### About Brexit
 - The reactions to Brexit on Twitter are very polarized. There are people who are devastated, and people who are genuinely happy about Brexit.
-- People are also very sarcastic toward how Brexit turned out be (as someone said, "sarcasm is the wit")
+- People are also very sarcastic toward how Brexit turned out be (as someone said, "sarcasm is the new wit")
 
 ### About the analysis
 - Sentimental analysis by the function `polarity` in the `qdap` package works very well with straightforward tweets, but doesn't work well with sarcasm.
