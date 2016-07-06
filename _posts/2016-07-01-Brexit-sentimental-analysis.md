@@ -59,6 +59,8 @@ In order to sentimenal analysis, I use the function `polarity` in the `qdap` pac
 The function `polarity` gives use a pretty comprehensive analysis in the polarity of the text (read more about the function [here](http://finzi.psych.upenn.edu/library/qdap/html/polarity.html)). However, in this case, I only need to use the polarity score of each tweet. 
 
 ```r
+library(qdap)
+
 #Using function polarity
 brexit$everything = polarity(brexit$text)
 #Extracting polarity score
