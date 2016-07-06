@@ -129,7 +129,7 @@ Which gives me:
 
 ![The division in emotional polarity in the whole sample](/images/Brexit-whole-pol.png)
 
-In the whole sample, the neutral tweets accounts for 57.8%, while negative and positive (or sarcastic) tweets have kind of balanced porportions (20.6% and 21.6%). 
+In the whole sample, the neutral tweets accounts for 57.8%, while negative and positive (or sarcastic) tweets have kind of balanced proportions (20.6% and 21.6%). 
 
 ## Examine the most retweeted tweets
 
