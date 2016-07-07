@@ -7,7 +7,7 @@ tags: [r, brexit, twitter, data analysis, politics, TwitteR, qdap]
 comments: true
 ---
 
-"What do you think about Brexit?" asked the interviewer, in my very first job interview in Vietnam, on June 24, 2016. Being unplugged from the Internet for 18 hours on the airplane from US to Vietnam, and another 12 hours of sleep due to jetlag, I was stunned. Being so unexpected as it was, Brexit cost me a job offer. However, also being hugely popular and polarized, it gives me a great opportunity to practice text mining and sentimental analysis. In this very first post, I would demonstrate the process of using the `TwitteR` and `tm` packages to mine and analyze Twitter users' reactions to Brexit on the day June 24, 2016, the very day Brexit happened.
+"What do you think about Brexit?" asked the interviewer, in my very first job interview in Vietnam, on June 24, 2016. Being unplugged from the Internet for 18 hours on the airplane from US to Vietnam, and another 12 hours of sleep due to jetlag, I was stunned. Being so unexpected as it was, Brexit cost me a job offer. However, also being hugely popular and polarized, it gives me a great opportunity to practice text mining and sentimental analysis. In this very first post, I would demonstrate the process of using the `TwitteR` and `qdap` packages to mine and analyze Twitter users' reactions to Brexit on the day June 24, 2016, the very day Brexit happened.
 
 ## Getting the data
 
