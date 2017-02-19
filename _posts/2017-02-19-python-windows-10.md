@@ -32,7 +32,13 @@ Most of the time, we don't need to get pip but need to update it. We can do by t
 ```
 python -m pip install -U pip
 ```
-Now you're ready to download new packages! There are two ways to install packages via pip, automatically and manually.
+To be careful, also update your `setuptools`:
+
+```
+pip install --upgrade setuptools
+```
+
+Updating `pip` and `setuptools` would help you avoid certain errors, such as the [*Command "python setup.py egg_info" failed with error code 1* error](http://stackoverflow.com/questions/35991403/python-pip-install-gives-command-python-setup-py-egg-info-failed-with-error-c). Now you're ready to download new packages! There are two ways to install packages via pip, automatically and manually.
 
 ### a. Automatically:
 
@@ -70,9 +76,71 @@ After getting the file, we can either change directory to the folder that contai
 pip install xgboost‑0.6‑cp36‑cp36m‑win_amd64.whl
 ```
 
-`xgboost` should be sucessfully installed to the computer! We also can check the list of packages we have installed and their versions by:
+`xgboost` should be sucessfully installed to the computer! 
+
+### c. Package list:
+
+We also can check the list of packages we have installed and their versions by:
 
 ```
 pip list
 ```
+which would generates a list of packages and their versions on our computer.
 
+# 3. Installing different python versions
+
+As mentioned above, Python has two different main versions: Python 2.x and Python 3.x. Each has its own advantages and disadvantages. In addition, a lot of packages only work in specific Python versions on Windows (`rpy2` only works in Python 2.x, `Tensorflow` only works in Python 3.5). As we progress, we would find ourselves wanting to switch back and forth between different Python versions. Fortunately, the process is very simple with Conda.
+
+To create a new Python environment, we use the command:
+
+```
+conda create -n envi-name python=version anaconda
+```
+For example, if I want to install Python 3.5 on my computer, I would use the command:
+
+```
+conda create -n py35 python=3.5 anaconda
+```
+in which `py35` is the environment name, `python=3.5` is the specific Python I want to install.
+
+To activate and access the new environment, we use the command:
+```
+activate environment-name
+```
+which is 
+```
+activate py35
+```
+in my example. Note that now the environment name would come before the directory in the command prompt. For example, mine is:
+```
+(py35) C:\Users\katietr>
+```
+
+In retrospect, to exit that environment and switch back to the default one, we use the command:
+```
+deactivate environment-name
+```
+which is
+```
+deactivate py35
+```
+in my example.
+
+# 4. Running Jupyter notebook:
+
+While **RStudio** is the most popular IDE for R, **Jupyter Notebook** is known for Python for data analytics because of its ability to include code, rich texts, plots, images and videos which is perfect for learning, documentation and presentation. Note that we can also run R with Jupyter notebook, which I can cover in another post. To run Jupyter notebook, we use the command:
+
+```
+jupyter notebook
+```
+A new kernel would be created; our web browser would open, and we would have the option to create a new notebook under **New** on top right, or open an existing notebook in the list. DataCamp has a comprehensive guide for Jupyter notebook [here](https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook#gs.s4ewsq0).
+
+# 5. Tips:
+
+- Try to read the documentation of a package before installing. A lot of necessary infomation, such as compatible python versions, dependable packages, uses, purposes, etc... are included in the documentation, so we can save a lot of time instead of blindlessly trying every method posted on Stackoverflow when an error occurs.
+
+- Update `pip` and `setuptools` once in a while. A lot of errors can be avoided by this.
+
+- Document the solutions that were used to solve technical issues that have occured, so we can use it in later times when errors occur again.
+
+Happy Pythoning!
