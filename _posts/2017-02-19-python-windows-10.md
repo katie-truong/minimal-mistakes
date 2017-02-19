@@ -6,7 +6,7 @@ category: Python
 
 Nowadays, Python is known as one of the most popular programming languages in development as well as data analytics domains. However, the catch is that it is not very Windows-friendly as it is to Mac OS or Linux. Windows users can choose to offset the disadvantage by [installing Linux on Windows 10](https://www.lifewire.com/install-ubuntu-linux-windows-10-steps-2202108), or installing Python and its data analytics tools properly. This tutorial aims to smoothen the installation process as much as possible, and provides solutions to common technical issues that can happen during the setup.
 
-# 1. Getting Anaconda and Python
+# 1. Getting Anaconda and Python:
 
 Although we can always download Python from the [main website](https://www.python.org/downloads/), we can save so much time by getting [Anaconda](https://www.continuum.io/downloads) instead. Anaconda is a distribution platform for Python (as well as R), specialized for data science, so it comes with a lot of necessary tools and packages for data science such as `Jupyter` notebook, `pandas`, `numpy`, `matplotlib`, `scikit-learn` and so on. As Anaconda recommends, choose the Python version that you use the most as the default environment. If you are a totally newbie to Python, this [link](https://wiki.python.org/moin/Python2orPython3) would give you some insights to make a decision. Note that this decision is not final; we can always jump back and forth between different Python versions, which I will cover later in the post.
 
@@ -21,7 +21,7 @@ Python 3.6.0 :: Anaconda 4.3.0 (64-bit)
 ```
 on my laptop.
 
-# 2. Installing new packages via pip
+# 2. Installing new packages via pip:
 
 To install new packages to Python, we can use `pip`. `pip` is the package management system used to distribute Python packages, which usually comes with Python in the installation process. If it's not, we can easily get it by the command:
 
@@ -87,7 +87,7 @@ pip list
 ```
 which would generates a list of packages and their versions on our computer.
 
-# 3. Installing different python versions
+# 3. Installing different python versions:
 
 As mentioned above, Python has two different main versions: Python 2.x and Python 3.x. Each has its own advantages and disadvantages. In addition, a lot of packages only work in specific Python versions on Windows (`rpy2` only works in Python 2.x, `Tensorflow` only works in Python 3.5). As we progress, we would find ourselves wanting to switch back and forth between different Python versions. Fortunately, the process is very simple with Conda.
 
