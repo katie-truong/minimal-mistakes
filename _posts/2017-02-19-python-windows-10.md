@@ -126,7 +126,22 @@ deactivate py35
 ```
 in my example.
 
-# 4. Running Jupyter notebook:
+# 4. Installing and setting up Git:
+
+**Git** is a version control system which is extremely useful to keep track of your work and progress, as well as to collaborate with other people. You can get **Git** [here](https://git-scm.com/download/win). Git will automatically give you the best setup version for your computer, or you can also choose the version that you want.
+
+After downloading the setup file, you can install Git. For first time users, I suggest keeping the default setup.
+
+After Git is install, open Git Bash and type:
+
+```
+git config --global user.name "your-user-name"
+git config --global user.email "your-email"
+```
+
+Now you're good to go!
+
+# 5. Running Jupyter notebook:
 
 While **RStudio** is the most popular IDE for R, **Jupyter Notebook** is known for Python for data analytics because of its ability to include code, rich texts, plots, images and videos which is perfect for learning, documentation and presentation. Note that we can also run R with Jupyter notebook, which I can cover in another post. To run Jupyter notebook, we use the command:
 
@@ -135,7 +150,7 @@ jupyter notebook
 ```
 A new kernel would be created; our web browser would open, and we would have the option to create a new notebook under **New** on top right, or open an existing notebook in the list. DataCamp has a comprehensive guide for Jupyter notebook [here](https://www.datacamp.com/community/tutorials/tutorial-jupyter-notebook#gs.s4ewsq0).
 
-# 5. Tips:
+# 6. Tips:
 
 - Try to read the documentation of a package before installing. A lot of necessary infomation, such as compatible python versions, dependable packages, uses, purposes, etc... are included in the documentation, so we can save a lot of time instead of blindlessly trying every method posted on Stackoverflow when an error occurs.
 
