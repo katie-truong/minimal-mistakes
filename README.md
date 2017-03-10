@@ -1,1 +1,1 @@
-The blog is using the [Minimal Mistakes](http://mmistakes.github.io/minimal-mistakes) theme by Michael Rose.
+This blog is a dedication for my interests including Statistics, Data Science and Analysis, Technology and Culture. It's using the [Minimal Mistakes](http://mmistakes.github.io/minimal-mistakes) theme by Michael Rose.
