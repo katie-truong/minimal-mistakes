@@ -168,3 +168,96 @@ plot_pickups <- ggplot(aes(x=pickup_longitude,y=pickup_latitude, alpha = V1, siz
             theme(plot.title=element_text(hjust = 0.5, margin=margin(b = -100, unit = "pt"), colour = "white"))
  ```
  
+![](/images/NYC-1.png)
+
+And the dropoff map:
+
+```
+plot_dropoffs <- ggplot(aes(x=dropoff_longitude,y=dropoff_latitude, alpha = V1, size = V1, col = V1),data=dropoff_counts) +
+            geom_point() +
+            scale_x_continuous(limits=c(min_long, max_long)) +
+            scale_y_continuous(limits=c(min_lat, max_lat)) +
+            theme(panel.background = element_rect(fill = 'black', colour = 'black'), 
+                  panel.grid.major = element_blank(), 
+                  panel.grid.minor = element_blank())+
+            scale_color_gradient(low="white", high="#ffd700", trans = "log") +
+            scale_alpha_continuous(range = alpha_range, trans = "log", limits = range(pickup_counts$V1)) +
+            scale_size_continuous(range = size_range, trans = "log", limits = range(pickup_counts$V1)) +
+            theme(axis.text.x=element_blank()) +
+            theme(axis.text.y=element_blank()) +
+            theme(axis.title.y=element_blank()) +
+            theme(axis.title.x=element_blank()) +
+            title_with_subtitle("New York City Taxi Dropoffs", "Valentine's Day 2016") +
+            theme(legend.position="none") +
+            theme(plot.title=element_text(hjust = 0.5, margin=margin(b = -100, unit = "pt"), colour = "white"))
+```
+![](/images/NYC-2.png)
+
+We can see that while pickup are heavily concentrated at Manhattan, dropoffs are scattered a lot into other boroughs, which is the same observation that Todd S. made on his [analysis](http://toddwschneider.com/) of 1.1 billion taxi trips from 2009 to 2015. I guess New Yorkers generally don't go anywhere out of norm during a Valentine's Day weekend.
+
+## The hot spots in Manhattan:
+
+Now, we can see that Manhattan is all lit up (well, literally), but what are the hottest spots in Manhattan on Valentine's Day? Let's see! 
+
+First, we can use `ggmap` to pull the map of Manhattan from Google Maps API.
+
+```
+Manhattan_map <- get_map("Manhattan",maptype="roadmap", zoom = 12)
+```
+Next, we can do the mapping. The bigger and darker a circle is, the busier the spot is.
+```
+map_pickups <- ggmap(Manhattan_map) +
+            geom_point(aes(x=pickup_longitude,y=pickup_latitude, alpha = V1, size = V1, col = V1),data=pickup_counts %>% filter(V1 >= 5)) +
+            theme(panel.background = element_rect(fill = 'black', colour = 'black'), 
+                  panel.grid.major = element_blank(), 
+                  panel.grid.minor = element_blank())+
+            scale_color_gradient(low="mediumorchid1", high="midnightblue", trans = "log") +
+            scale_alpha_continuous(range = alpha_range, trans = "log", limits = range(pickup_counts$V1)) +
+            theme(axis.text.x=element_blank()) +
+            theme(axis.text.y=element_blank()) +
+            theme(axis.title.y=element_blank()) +
+            theme(axis.title.x=element_blank()) +
+            theme(legend.position="none") +
+            theme(plot.title=element_text(hjust = 0.5, margin=margin(b = -10, unit = "pt"))) +
+            title_with_subtitle("Manhattan Taxi Pickup Hot Spots", "Valentine's Day 2016") 
+```
+![](/images/NYC-3.png)
+```
+map_dropoffs <- ggmap(Manhattan_map) +
+            geom_point(aes(x=dropoff_longitude,y=dropoff_latitude, alpha = V1, size = V1, col = V1),data=dropoff_counts %>% filter(V1 >= 5)) +
+            theme(panel.background = element_rect(fill = 'black', colour = 'black'), 
+                  panel.grid.major = element_blank(), 
+                  panel.grid.minor = element_blank())+
+            scale_color_gradient(low="mediumorchid1", high="midnightblue", trans = "log") +
+            scale_alpha_continuous(range = alpha_range, trans = "log", limits = range(pickup_counts$V1)) +
+            theme(axis.text.x=element_blank()) +
+            theme(axis.text.y=element_blank()) +
+            theme(axis.title.y=element_blank()) +
+            theme(axis.title.x=element_blank()) +
+            theme(legend.position="none") +
+            theme(plot.title=element_text(hjust = 0.5, margin=margin(b = -10, unit = "pt"))) +
+            title_with_subtitle("Manhattan Taxi Dropoff Hot Spots", "Valentine's Day 2016") 
+map_dropoffs
+```
+![](/images/NYC-4.png)
+
+We can see that the busiest spots for both picking up and dropping off are almost alike, which indeed makes sense, as the people have been dropped off at the spots would need taxis to pick them up. As we can predict, areas around the famous tourist attractions in NYC such as Time Square, Empire State Building, Webster Hall, Central Zetc... are pretty busy. However, what location does the busiest spot in Upper Manhattan belong to? For the sake of our curiosity, we can use function `revgeocode` in the `ggmap` package to do a little detective work. We can get the coordinates of that location from our coordinate count tables above:
+
+```
+revgeocode(c(-73.97175, 40.74925))
+```
+which returns the address of the pair of coordinates:
+```
+'310 E 42nd St, New York, NY 10017, USA'
+```
+A little more googling would reveal that it is the [Church of the Covenant](https://www.yelp.com/biz/church-of-the-covenant-new-york) in New York. If you forget, Valentine's Day 2016 was on a Sunday. And of course, people go to church on Sunday. 
+
+## Conclusion:
+
+Comparing to the maps of pickups and dropoffs of 1.1 billion taxi trips that Todd S. made, we can see that our pickup and dropoff maps don't really differ. Life went on pretty normality on a Valentine's weekend for most people. The majority of traffic don't go anywhere out of norm. A lot of people still went to church and normal weekend activities, while other spent time in midtown around the famous landmarks in NYC.
+
+So unfortunately, we can't measure how romantic New Yorkers based on their taxi activity on a Valentine's Day (and I am not really sure if *romance* is even a quantitative measurement. Maybe in movies, romance is to quit your job and move to a new town in a heartbeat; in reality, to live life with responsibility and stability is a kind of romance.
+
+Thank you for reading! Stay tuned for the next part where I would do more in depth analysis of New Yorkers' taxi activities and cab etiquette. 
+
+The Jupyter version of this blog spot is [here](https://github.com/katie-truong/Jupyter/blob/master/NYC-Valentine-Taxi-part1.ipynb).
