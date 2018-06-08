@@ -1,18 +1,18 @@
 ---
 layout: single
-title: "Growth and learning"
+title: "alert('Hello, World!')"
 description: "life update"
 category: personal
 tags: [personal, google, software engineering, growth, learning, luck]
 ---
-
-![JavaScript](https://images.pexels.com/photos/247791/pexels-photo-247791.png)
 
 ## alert('Hello, World!')
 
 Around half a year ago, I picked up JavaScript, first in order to learn `D3.js`. I was (and still am) a fan of fancy graphs, and at one point, `ggplot2`, `matplotlib`, and even Tableau didn't feel enough for me. The thrill to pick up a new language was real. The application of JavaScript, as instant as it was, on web based environments, was exciting. 
 
 It was obvious that I could use JS to do more than just a few fancy graphs. It was obvious that I could use JS for more than just a hobby. I started dreaming about what I could do with my newfound skill. Then I started considering development.
+
+![JavaScript](https://images.pexels.com/photos/247791/pexels-photo-247791.png)
 
 ## Me and software engineering
 
