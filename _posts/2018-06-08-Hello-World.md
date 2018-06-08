@@ -14,7 +14,7 @@ It was obvious that I could use JS to do more than just a few fancy graphs. It w
 
 ## Me and software engineering
 
-It is not an exaggeration to say that I grew up within a dev circle. In the late 1990s, President Bill Clinton came to Vietnam and normalized the diplomatic relationship between the United States and Vietnam, the first wave of technology came in the country. My dad went back to college to get a degree in "programming", and started working as a programmer for a local company, making very basic softwares at the time. I grew up, never without a company by my side. 
+It is not an exaggeration to say that I grew up within a dev circle. In the late 1990s, President Bill Clinton came to Vietnam and normalized the diplomatic relationship between the United States and Vietnam, the first wave of technology came in the country. My dad went back to college to get a degree in "programming", and started working as a programmer for a local company, making very basic softwares at the time. I grew up, never without a computer by my side. 
 
 In my high school years, I went to a competitive high school in Vietnam (which actually goes by the name "High School for the Gifted"). I met my best friend, who was (and still is) a passionate programmer. We had late night talks about computers almost every night.
 
