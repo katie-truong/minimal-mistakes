@@ -3,6 +3,7 @@ layout: single
 permalink: /about/
 title: "About me"
 ---
-I'm a rising senior at UC Davis, majoring in Statistics and minoring in Managerial Economics. I also serve as the Financial Operation Executive for [**iidata**](http://www.iidata.net/), the first student-run Data Science Convention, located in UC Davis.
 
-This blog is a dedication for my interests including Statistics, Data Science and Analysis, Technology and Culture. 
+I love creating beautiful, insightful things for the World Wide Web, one line of code at a time.
+      
+In my past life, I organized the first student-run data science convention in Sacramento Area, and fought evil off the Internet at Google and YouTube. Now I'm excited for my next journey in software engineering!
