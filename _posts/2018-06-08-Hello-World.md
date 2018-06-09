@@ -3,7 +3,7 @@ layout: single
 title: "alert('Hello, World!')"
 description: "life update"
 category: personal
-tags: [personal, google, software engineering, growth, learning, luck]
+tags: [personal, software engineering, growth, learning]
 ---
 
 Around half a year ago, I picked up JavaScript, first in order to learn `D3.js`. I was (and still am) a fan of fancy graphs, and at one point, `ggplot2`, `matplotlib`, and even Tableau didn't feel enough for me. The thrill to pick up a new language was real. The application of JavaScript, as instant as it was, on web based environments, was exciting. 
